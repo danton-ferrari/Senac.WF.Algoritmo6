@@ -39,13 +39,18 @@ namespace solucao
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            var resposta = MessageBox.Show("Você deseja encerrar o programa?", 
-                "Sair", MessageBoxButtons.YesNo, 
+            var resposta = MessageBox.Show("Você deseja encerrar o programa?",
+                "Sair", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
-            if(resposta == DialogResult.Yes)
+            if (resposta == DialogResult.Yes)
             {
-            Application.Exit();
+                Application.Exit();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
