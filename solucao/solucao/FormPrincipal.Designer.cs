@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             panel1 = new Panel();
+            menos1 = new PictureBox();
+            x1 = new PictureBox();
             panel2 = new Panel();
             label1 = new Label();
             pictureBox4 = new PictureBox();
@@ -43,6 +45,9 @@
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label2 = new Label();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)menos1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)x1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel3.SuspendLayout();
@@ -54,10 +59,36 @@
             // panel1
             // 
             panel1.BackColor = Color.Red;
+            panel1.Controls.Add(menos1);
+            panel1.Controls.Add(x1);
             panel1.Location = new Point(299, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1024, 54);
             panel1.TabIndex = 1;
+            // 
+            // menos1
+            // 
+            menos1.BackColor = Color.White;
+            menos1.Image = (Image)resources.GetObject("menos1.Image");
+            menos1.Location = new Point(970, 12);
+            menos1.Name = "menos1";
+            menos1.Size = new Size(42, 35);
+            menos1.SizeMode = PictureBoxSizeMode.Zoom;
+            menos1.TabIndex = 11;
+            menos1.TabStop = false;
+            menos1.Click += menos1_Click;
+            // 
+            // x1
+            // 
+            x1.BackColor = Color.White;
+            x1.Image = (Image)resources.GetObject("x1.Image");
+            x1.Location = new Point(928, 12);
+            x1.Name = "x1";
+            x1.Size = new Size(42, 35);
+            x1.SizeMode = PictureBoxSizeMode.Zoom;
+            x1.TabIndex = 10;
+            x1.TabStop = false;
+            x1.Click += x1_Click;
             // 
             // panel2
             // 
@@ -240,7 +271,9 @@
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Senac Foods";
-            WindowState = FormWindowState.Maximized;
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)menos1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)x1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -267,5 +300,7 @@
         private PictureBox pictureBox3;
         private Label label1;
         private Label label2;
+        private PictureBox menos1;
+        private PictureBox x1;
     }
 }

@@ -17,5 +17,20 @@ namespace solucao
             InitializeComponent();
         }
 
+        private void x1_Click(object sender, EventArgs e)
+        {
+            var resposta = MessageBox.Show("Você deseja encerrar o programa?",
+                "Sair", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (resposta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void menos1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

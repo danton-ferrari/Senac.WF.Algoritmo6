@@ -53,5 +53,14 @@ namespace solucao
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Esconde a tela de login
+            this.Hide();
+            // Cria uma nova instância do formu~lário principal
+            var formPrincipal = new FormPrincipal();
+            // Exibe o fomrulário principal
+            formPrincipal.Show();
+        }
     }
 }

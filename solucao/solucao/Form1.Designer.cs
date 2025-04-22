@@ -92,6 +92,7 @@
             button1.TabIndex = 4;
             button1.Text = "ENTRAR";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -147,7 +148,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "TelaInicial";
             Text = "Form1";
-            WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
